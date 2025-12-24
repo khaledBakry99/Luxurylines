@@ -1,0 +1,54 @@
+/* Custom Scrollbar Styles - Luxury Lines */
+/* يمكن استخدام هذا الملف في أي مكان بالمشروع */
+
+/* Scrollbar للمتصفحات المبنية على Webkit (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(10, 31, 33, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #CBC1B8, #F7F6F4);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #F7F6F4, #CBC1B8);
+}
+
+/* Scrollbar لمتصفح Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #CBC1B8 rgba(10, 31, 33, 0.3);
+}
+
+/* Scrollbar عام للصفحة كاملة */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 31, 33, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #CBC1B8, #F7F6F4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #F7F6F4, #CBC1B8);
+}
+
+/* Firefox - Scrollbar عام */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CBC1B8 rgba(10, 31, 33, 0.3);
+}

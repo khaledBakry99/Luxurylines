@@ -1,0 +1,24 @@
+export default function FavoritesHero() {
+  return (
+    <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://readdy.ai/api/search-image?query=Elegant%20luxury%20interior%20design%20workspace%20with%20favorite%20items%20collection%2C%20sophisticated%20modern%20office%20with%20curated%20design%20pieces%2C%20premium%20furniture%20showroom%2C%20warm%20ambient%20lighting%2C%20professional%20photography%2C%20high-end%20aesthetic%2C%20refined%20atmosphere&width=1920&height=600&seq=favorites-hero-bg&orientation=landscape)'
+        }}
+      ></div>
+      
+      <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#003366]/90 to-[#001F3F]/95"></div>
+
+      <div className="container mx-auto px-4 relative z-10 text-center">
+        <div className="w-24 h-24 bg-gradient-to-br from-[#FFA500] to-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
+          <i className="ri-heart-line text-white text-5xl"></i>
+        </div>
+        <h1 className="text-5xl font-bold text-white mb-4">المفضلة</h1>
+        <p className="text-white/90 text-xl max-w-2xl mx-auto">
+          احفظ تصاميمك ومنتجاتك المفضلة للرجوع إليها لاحقاً
+        </p>
+      </div>
+    </section>
+  );
+}
