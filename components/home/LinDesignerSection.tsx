@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function LinDesignerSection() {
   return (
@@ -11,27 +11,34 @@ export default function LinDesignerSection() {
               جرب أداة مصمم الديكور الذكي التفاعلية
             </h2>
             <p className="text-lg text-[#CBC1B8]/90 mb-8 leading-relaxed">
-              أداة تفاعلية مبتكرة تتيح لك إدخال أبعاد غرفتك وتجربة ألوان الجدران وتطبيق مواد الأرضية المختلفة قبل اتخاذ القرار النهائي.
+              أداة تفاعلية مبتكرة تتيح لك إدخال أبعاد غرفتك وتجربة ألوان الجدران
+              وتطبيق مواد الأرضية المختلفة قبل اتخاذ القرار النهائي.
             </p>
-            
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
                 <div className="w-6 h-6 flex items-center justify-center bg-[#CBC1B8] rounded-full ml-4">
                   <i className="ri-check-line text-[#0A1F21] text-sm"></i>
                 </div>
-                <span className="text-[#CBC1B8]/90">إدخال أبعاد الغرفة بدقة</span>
+                <span className="text-[#CBC1B8]/90">
+                  إدخال أبعاد الغرفة بدقة
+                </span>
               </div>
               <div className="flex items-center">
                 <div className="w-6 h-6 flex items-center justify-center bg-[#CBC1B8] rounded-full ml-4">
                   <i className="ri-check-line text-[#0A1F21] text-sm"></i>
                 </div>
-                <span className="text-[#CBC1B8]/90">تجربة ألوان الجدران المختلفة</span>
+                <span className="text-[#CBC1B8]/90">
+                  تجربة ألوان الجدران المختلفة
+                </span>
               </div>
               <div className="flex items-center">
                 <div className="w-6 h-6 flex items-center justify-center bg-[#CBC1B8] rounded-full ml-4">
                   <i className="ri-check-line text-[#0A1F21] text-sm"></i>
                 </div>
-                <span className="text-[#CBC1B8]/90">اختيار أنواع الأرضيات وورق الجدران</span>
+                <span className="text-[#CBC1B8]/90">
+                  اختيار أنواع الأرضيات وورق الجدران
+                </span>
               </div>
               <div className="flex items-center">
                 <div className="w-6 h-6 flex items-center justify-center bg-[#CBC1B8] rounded-full ml-4">
@@ -41,20 +48,17 @@ export default function LinDesignerSection() {
               </div>
             </div>
 
-            <Link 
+            <Link
               href="/lin-designer"
-              className="group relative inline-flex items-center gap-4 bg-[#CBC1B8] text-[#0A1F21] px-10 py-5 rounded-2xl font-['Cairo'] font-bold text-lg hover:bg-[#F7F6F4] transition-all duration-500 cursor-pointer shadow-lg hover:shadow-[#CBC1B8]/15 hover:scale-105 whitespace-nowrap overflow-hidden"
+              className="group relative inline-flex items-center gap-4 bg-[#CBC1B8] text-[#0A1F21] px-10 py-5 rounded-2xl font-['Cairo'] font-bold text-lg hover:bg-[#CBC1B8] transition-all duration-500 cursor-pointer shadow-lg hover:shadow-[#CBC1B8]/15 whitespace-nowrap overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F21]/0 via-[#0A1F21]/10 to-[#0A1F21]/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              
+
               <div className="relative flex items-center gap-4">
-                <div className="w-8 h-8 flex items-center justify-center bg-[#0A1F21]/20 rounded-full group-hover:bg-[#0A1F21]/30 group-hover:rotate-12 transition-all duration-300">
-                  <i className="ri-palette-line text-xl group-hover:scale-110 transition-transform duration-300"></i>
+                <div className="w-8 h-8 flex items-center justify-center bg-[#0A1F21]/30 rounded-full transition-all duration-300">
+                  <i className="ri-palette-line text-xl"></i>
                 </div>
-                <span className="relative">
-                  ابدأ التصميم الآن
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0A1F21]/50 group-hover:w-full transition-all duration-500"></div>
-                </span>
+                <span>ابدأ التصميم الآن</span>
               </div>
 
               <div className="absolute inset-0 rounded-2xl bg-[#CBC1B8] blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10"></div>

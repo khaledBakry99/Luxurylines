@@ -2,7 +2,7 @@
 
 export default function CartHero() {
   return (
-    <section className="relative bg-gradient-to-br from-[#001F3F] via-[#003366] to-[#004080] text-white overflow-hidden min-h-[400px]">
+    <section className="relative bg-gradient-to-br from-[#0A1F21] via-[#1C474A] to-[#0A1F21] text-white overflow-hidden min-h-[400px]">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -11,12 +11,12 @@ export default function CartHero() {
         }}
       ></div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/80 via-[#003366]/70 to-[#001F3F]/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F21]/80 via-[#1C474A]/70 to-[#0A1F21]/80"></div>
 
       <div className="container mx-auto px-6 py-24 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-8 border border-white/20">
-            <i className="ri-shopping-cart-line text-2xl text-[#FFA500]"></i>
+          <div className="inline-flex items-center gap-3 bg-[#CBC1B8]/20 backdrop-blur-sm px-6 py-3 rounded-full mb-8 border border-[#CBC1B8]/30">
+            <i className="ri-shopping-cart-line text-2xl text-[#CBC1B8]"></i>
             <span className="font-semibold">سلة التسوق</span>
           </div>
 
@@ -24,21 +24,21 @@ export default function CartHero() {
             سلة التسوق الخاصة بك
           </h1>
 
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-xl text-[#CBC1B8] mb-8 leading-relaxed">
             راجع طلباتك ومشترياتك وأكمل عملية الشراء بكل سهولة
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <i className="ri-shield-check-line text-[#FFA500] text-lg"></i>
+            <div className="flex items-center gap-2 bg-[#CBC1B8]/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <i className="ri-shield-check-line text-[#CBC1B8] text-lg"></i>
               <span>دفع آمن</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <i className="ri-truck-line text-[#FFA500] text-lg"></i>
+            <div className="flex items-center gap-2 bg-[#CBC1B8]/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <i className="ri-truck-line text-[#CBC1B8] text-lg"></i>
               <span>شحن سريع</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <i className="ri-customer-service-2-line text-[#FFA500] text-lg"></i>
+            <div className="flex items-center gap-2 bg-[#CBC1B8]/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <i className="ri-customer-service-2-line text-[#CBC1B8] text-lg"></i>
               <span>دعم 24/7</span>
             </div>
           </div>

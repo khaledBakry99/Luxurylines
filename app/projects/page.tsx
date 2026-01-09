@@ -1,27 +1,30 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ProjectsHero from './ProjectsHero';
-import ProjectsFilter from './ProjectsFilter';
-import ProjectsGrid from './ProjectsGrid';
-import ProjectStats from './ProjectStats';
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ProjectsHero from "./ProjectsHero";
+import ProjectsFilter from "./ProjectsFilter";
+import ProjectsGrid from "./ProjectsGrid";
+import ProjectStats from "./ProjectStats";
 
 export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState('الكل');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeFilter, setActiveFilter] = useState("الكل");
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="bg-gradient-to-br from-[#1C474A] via-[#0F3A3E] to-[#1C474A]">
+      <main className="bg-gradient-to-br from-[#0A2F33] to-[#0A1F21]">
         <ProjectsHero />
-        
-        <section id="projects-section" className="py-20">
+
+        <section
+          id="projects-section"
+          className="py-20 bg-gradient-to-br from-[#0A2F33] to-[#0A1F21]"
+        >
           <div className="container mx-auto px-6">
-            <ProjectsFilter 
-              activeFilter={activeFilter} 
+            <ProjectsFilter
+              activeFilter={activeFilter}
               onFilterChange={setActiveFilter}
               searchTerm={searchTerm}
               onSearchChange={setSearchTerm}

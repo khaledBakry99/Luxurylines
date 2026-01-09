@@ -66,23 +66,23 @@ export default function ServiceGallery() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-[#0F3A3E] to-[#1C474A] relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-[#1C474A] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-[#0A2F33] rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#0A2F33] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-[#0A1F21] rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           <div className="mb-6">
-            <span className="inline-block bg-[#1C474A]-100 text-[#0A1F21]-600 px-6 py-2 rounded-full text-lg font-semibold">
+            <span className="inline-block bg-[#CBC1B8]/20 text-[#CBC1B8] px-6 py-2 rounded-full text-lg font-semibold">
               معرض الأعمال
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-['Cairo'] font-bold text-[#0A1F21] mb-6">
+          <h2 className="text-4xl md:text-5xl font-['Cairo'] font-bold text-[#F7F6F4] mb-6">
             مشاريعنا المنجزة
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-[#CBC1B8]/90 max-w-3xl mx-auto">
             تصفح مجموعة من أهم المشاريع التي تعهدنا بإدارتها وتنفيذها بنجاح
           </p>
         </div>
@@ -92,10 +92,10 @@ export default function ServiceGallery() {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-['Cairo'] font-semibold transition-all duration-300 ${
                 activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-[#0A1F21] to-[#0F3A3E] text-white shadow-lg transform scale-105'
-                  : 'bg-gray-100 text-white/80 hover:bg-gray-200'
+                  ? 'bg-gradient-to-r from-[#CBC1B8] to-[#F7F6F4] text-[#0A1F21] shadow-lg transform scale-105'
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-[#CBC1B8] hover:bg-white/20'
               }`}
             >
               {filter.name}
@@ -107,7 +107,7 @@ export default function ServiceGallery() {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
+              className={`group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:bg-white/15 transition-all duration-500 transform hover:-translate-y-2 ${
                 isVisible ? 'animate-fade-in-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
@@ -118,13 +118,13 @@ export default function ServiceGallery() {
                   alt={project.title}
                   className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F21]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-['Cairo'] font-bold text-[#0A1F21] mb-3">
+                <h3 className="text-xl font-['Cairo'] font-bold text-[#F7F6F4] mb-3">
                   {project.title}
                 </h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-[#CBC1B8]/85 leading-relaxed">
                   {project.description}
                 </p>
               </div>

@@ -1,73 +1,76 @@
-﻿
+"use client";
+
 export default function ServiceProcess() {
   const steps = [
     {
-      number: '01',
-      title: 'الاستشارة الأولية',
-      description: 'نلتقي بك لفهم رؤيتك ومتطلباتك وميزانيتك',
-      icon: 'ri-chat-3-line'
+      number: "01",
+      icon: "ri-discuss-line",
+      title: "التخطيط والتحليل",
+      description: "نلتقي بك لفهم رؤيتك واحتياجاتك للمساحة",
     },
     {
-      number: '02',
-      title: 'قياس المساحة',
-      description: 'نقوم بقياس دقيق للمساحة وتحليل الإمكانيات',
-      icon: 'ri-ruler-line'
+      number: "02",
+      icon: "ri-ruler-2-line",
+      title: "القياسات الدقيقة",
+      description: "نأخذ قياسات دقيقة للمساحة ونحلل الإمكانيات",
     },
     {
-      number: '03',
-      title: 'التصميم الأولي',
-      description: 'نضع المخططات الأولية والتصور ثلاثي الأبعاد',
-      icon: 'ri-draft-line'
+      number: "03",
+      icon: "ri-pencil-ruler-2-line",
+      title: "التصميم المبدئي",
+      description: "نقدم تصاميم أولية ثنائية وثلاثية الأبعاد",
     },
     {
-      number: '04',
-      title: 'المراجعة والتعديل',
-      description: 'نراجع التصميم معك ونجري التعديلات المطلوبة',
-      icon: 'ri-edit-line'
+      number: "04",
+      icon: "ri-palette-line",
+      title: "اختيار المواد",
+      description: "نساعدك في اختيار الألوان والمواد والتشطيبات",
     },
     {
-      number: '05',
-      title: 'اختيار المواد',
-      description: 'نساعدك في اختيار المواد والألوان والأثاث',
-      icon: 'ri-palette-line'
+      number: "05",
+      icon: "ri-hammer-line",
+      title: "التنفيذ والإشراف",
+      description: "نشرف على تنفيذ التصميم بأعلى معايير الجودة",
     },
     {
-      number: '06',
-      title: 'التنفيذ والإشراف',
-      description: 'نشرف على تنفيذ المشروع حتى التسليم النهائي',
-      icon: 'ri-tools-line'
-    }
+      number: "06",
+      icon: "ri-checkbox-circle-line",
+      title: "التسليم النهائي",
+      description: "نسلمك مساحتك جاهزة ومكتملة بكل التفاصيل",
+    },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#0F3A3E] to-[#1C474A]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-[#0A1F21] to-[#0F3A3E]">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            مراحل العمل
+          <h2 className="text-4xl md:text-5xl font-['Cairo'] font-bold text-[#F7F6F4] mb-6">
+            خطوات العمل
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            نتبع منهجية واضحة ومنظمة لضمان تحقيق أفضل النتائج في كل مشروع
+          <p className="text-xl text-[#CBC1B8]/90 max-w-3xl mx-auto">
+            نتبع منهجية واضحة لضمان تصميم داخلي مثالي يلبي توقعاتك
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative group">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 hover:bg-white/20">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#CBC1B8] to-[#F7F6F4] rounded-xl flex items-center justify-center ml-4">
-                    <i className={`${step.icon} text-xl text-[#0A1F21]`}></i>
-                  </div>
-                  <div className="text-3xl font-bold text-[#CBC1B8]">{step.number}</div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:bg-white/15">
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-[#CBC1B8] to-[#F7F6F4] rounded-2xl flex items-center justify-center text-[#0A1F21] font-bold text-xl shadow-lg">
+                  {step.number}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <p className="text-white/80 leading-relaxed">{step.description}</p>
+
+                <div className="w-16 h-16 bg-gradient-to-br from-[#CBC1B8] to-[#F7F6F4] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <i className={`${step.icon} text-3xl text-[#0A1F21]`}></i>
+                </div>
+
+                <h3 className="text-2xl font-['Cairo'] font-bold text-[#F7F6F4] mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-[#CBC1B8]/85 leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-              
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -left-4 w-8 h-0.5 bg-[#CBC1B8]/30 transform -translate-y-1/2"></div>
-              )}
             </div>
           ))}
         </div>

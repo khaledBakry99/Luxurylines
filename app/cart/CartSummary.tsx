@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function CartSummary() {
   const router = useRouter();
-  const [discountCode, setDiscountCode] = useState('');
+  const [discountCode, setDiscountCode] = useState("");
   const [appliedDiscount, setAppliedDiscount] = useState(0);
-  const [discountMessage, setDiscountMessage] = useState('');
+  const [discountMessage, setDiscountMessage] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [showPaymentMethods, setShowPaymentMethods] = useState(false);
 
@@ -20,21 +20,21 @@ export default function CartSummary() {
 
   const applyDiscount = () => {
     if (!discountCode.trim()) {
-      setDiscountMessage('يرجى إدخال كود الخصم ❌');
+      setDiscountMessage("يرجى إدخال كود الخصم ❌");
       return;
     }
 
-    if (discountCode === 'SAVE10') {
+    if (discountCode === "SAVE10") {
       setAppliedDiscount(subtotal * 0.1);
-      setDiscountMessage('تم تطبيق خصم 10%! 🎉');
-    } else if (discountCode === 'SAVE20') {
+      setDiscountMessage("تم تطبيق خصم 10%! 🎉");
+    } else if (discountCode === "SAVE20") {
       setAppliedDiscount(subtotal * 0.2);
-      setDiscountMessage('تم تطبيق خصم 20%! 🎉');
-    } else if (discountCode === 'WELCOME15') {
+      setDiscountMessage("تم تطبيق خصم 20%! 🎉");
+    } else if (discountCode === "WELCOME15") {
       setAppliedDiscount(subtotal * 0.15);
-      setDiscountMessage('تم تطبيق خصم الترحيب 15%! 🎉');
+      setDiscountMessage("تم تطبيق خصم الترحيب 15%! 🎉");
     } else {
-      setDiscountMessage('كود الخصم غير صالح ❌');
+      setDiscountMessage("كود الخصم غير صالح ❌");
       setAppliedDiscount(0);
     }
   };
@@ -43,7 +43,7 @@ export default function CartSummary() {
     setIsProcessing(true);
     setTimeout(() => {
       setIsProcessing(false);
-      router.push('/checkout');
+      router.push("/checkout");
     }, 1000);
   };
 
@@ -52,10 +52,10 @@ export default function CartSummary() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl overflow-hidden sticky top-24 transform hover:shadow-2xl transition-all duration-500">
-      <div className="bg-gradient-to-r from-[#FFA500] to-[#ff8c00] p-6">
+    <div className="bg-[#F7F6F4] rounded-2xl shadow-xl overflow-hidden sticky top-24 transform hover:shadow-2xl transition-all duration-500 border border-[#CBC1B8]/20">
+      <div className="bg-gradient-to-r from-[#0A1F21] to-[#1C474A] p-6">
         <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+          <div className="w-10 h-10 bg-[#CBC1B8]/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
             <i className="ri-file-list-3-line text-xl"></i>
           </div>
           <span>ملخص الطلب</span>
@@ -66,7 +66,7 @@ export default function CartSummary() {
         <div className="space-y-4 mb-6">
           <div className="flex justify-between text-gray-700 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
             <span className="flex items-center gap-2">
-              <i className="ri-shopping-bag-line text-[#FFA500]"></i>
+              <i className="ri-shopping-bag-line text-[#0A1F21]"></i>
               <span>المجموع الفرعي</span>
             </span>
             <span className="font-semibold">{subtotal.toFixed(2)} ر.س</span>
@@ -94,17 +94,19 @@ export default function CartSummary() {
                 <i className="ri-gift-line"></i>
                 <span>الخصم</span>
               </span>
-              <span className="font-bold">-{appliedDiscount.toFixed(2)} ر.س</span>
+              <span className="font-bold">
+                -{appliedDiscount.toFixed(2)} ر.س
+              </span>
             </div>
           )}
 
           <div className="border-t-2 border-gray-200 pt-4 mt-4">
-            <div className="flex justify-between text-xl font-bold text-gray-900 p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl shadow-inner">
+            <div className="flex justify-between text-xl font-bold text-gray-900 p-4 bg-gradient-to-r from-[#CBC1B8]/20 to-[#F7F6F4]/20 rounded-xl shadow-inner">
               <span className="flex items-center gap-2">
-                <i className="ri-money-dollar-circle-line text-[#FFA500]"></i>
+                <i className="ri-money-dollar-circle-line text-[#0A1F21]"></i>
                 <span>المجموع الكلي</span>
               </span>
-              <span className="text-[#FFA500]">{total.toFixed(2)} ر.س</span>
+              <span className="text-[#0A1F21]">{total.toFixed(2)} ر.س</span>
             </div>
           </div>
         </div>
@@ -121,9 +123,9 @@ export default function CartSummary() {
               type="text"
               value={discountCode}
               onChange={(e) => setDiscountCode(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && applyDiscount()}
+              onKeyPress={(e) => e.key === "Enter" && applyDiscount()}
             />
-            <button 
+            <button
               onClick={applyDiscount}
               className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm font-semibold whitespace-nowrap cursor-pointer"
             >
@@ -134,18 +136,28 @@ export default function CartSummary() {
             </button>
           </div>
           {discountMessage && (
-            <p className={`mt-3 text-sm font-semibold ${appliedDiscount > 0 ? 'text-green-600' : 'text-red-600'} animate-bounce`}>
+            <p
+              className={`mt-3 text-sm font-semibold ${
+                appliedDiscount > 0 ? "text-green-600" : "text-red-600"
+              } animate-bounce`}
+            >
               {discountMessage}
             </p>
           )}
-          <p className="mt-2 text-xs text-gray-500">جرب: SAVE10 أو SAVE20 أو WELCOME15</p>
+          <p className="mt-2 text-xs text-gray-500">
+            جرب: SAVE10 أو SAVE20 أو WELCOME15
+          </p>
         </div>
 
         <div className="space-y-3 mb-6">
-          <button 
+          <button
             onClick={handleCheckout}
             disabled={isProcessing}
-            className={`w-full ${isProcessing ? 'bg-gray-400' : 'bg-gradient-to-r from-[#FFA500] to-[#ff8c00]'} text-white py-4 rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-bold text-lg whitespace-nowrap cursor-pointer group`}
+            className={`w-full ${
+              isProcessing
+                ? "bg-gray-400"
+                : "bg-gradient-to-r from-[#CBC1B8] to-[#F7F6F4]"
+            } text-[#0A1F21] py-4 rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-bold text-lg whitespace-nowrap cursor-pointer group`}
           >
             <span className="flex items-center justify-center gap-2">
               {isProcessing ? (
@@ -163,9 +175,9 @@ export default function CartSummary() {
             </span>
           </button>
 
-          <Link 
+          <Link
             href="/store"
-            className="w-full border-2 border-gray-300 text-gray-700 py-4 rounded-xl hover:bg-gray-50 hover:border-[#FFA500] hover:text-[#FFA500] transition-all duration-300 font-semibold whitespace-nowrap cursor-pointer group flex items-center justify-center"
+            className="w-full border-2 border-[#CBC1B8] text-[#0A1F21] py-4 rounded-xl hover:bg-[#CBC1B8]/10 hover:border-[#0A1F21] hover:text-[#0A1F21] transition-all duration-300 font-semibold whitespace-nowrap cursor-pointer group flex items-center justify-center"
           >
             <span className="flex items-center justify-center gap-2">
               <i className="ri-store-line group-hover:animate-pulse"></i>
@@ -180,8 +192,10 @@ export default function CartSummary() {
             <span>ضمانات الشراء</span>
           </h3>
 
-          <div className="flex items-start gap-3 p-3 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300 group cursor-pointer"
-               onClick={() => alert('دفع آمن ومضمون مع تشفير SSL 🔒')}>
+          <div
+            className="flex items-start gap-3 p-3 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-300 group cursor-pointer"
+            onClick={() => alert("دفع آمن ومضمون مع تشفير SSL 🔒")}
+          >
             <div className="w-10 h-10 flex items-center justify-center bg-green-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
               <i className="ri-shield-check-line text-white text-lg"></i>
             </div>
@@ -191,8 +205,10 @@ export default function CartSummary() {
             </div>
           </div>
 
-          <div className="flex items-start gap-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 group cursor-pointer"
-               onClick={() => alert('شحن مجاني للطلبات أكثر من 500 ر.س 🚚')}>
+          <div
+            className="flex items-start gap-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 group cursor-pointer"
+            onClick={() => alert("شحن مجاني للطلبات أكثر من 500 ر.س 🚚")}
+          >
             <div className="w-10 h-10 flex items-center justify-center bg-blue-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
               <i className="ri-truck-line text-white text-lg"></i>
             </div>
@@ -202,8 +218,10 @@ export default function CartSummary() {
             </div>
           </div>
 
-          <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors duration-300 group cursor-pointer"
-               onClick={() => alert('يمكنك إرجاع المنتجات خلال 30 يوم 🔄')}>
+          <div
+            className="flex items-start gap-3 p-3 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors duration-300 group cursor-pointer"
+            onClick={() => alert("يمكنك إرجاع المنتجات خلال 30 يوم 🔄")}
+          >
             <div className="w-10 h-10 flex items-center justify-center bg-[#FFA500] rounded-xl shadow-lg group-hover:scale-110 transition-transform">
               <i className="ri-refresh-line text-white text-lg"></i>
             </div>
@@ -213,8 +231,10 @@ export default function CartSummary() {
             </div>
           </div>
 
-          <div className="flex items-start gap-3 p-3 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors duration-300 group cursor-pointer"
-               onClick={() => alert('فريق الدعم متاح 24/7 لمساعدتك 📞')}>
+          <div
+            className="flex items-start gap-3 p-3 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors duration-300 group cursor-pointer"
+            onClick={() => alert("فريق الدعم متاح 24/7 لمساعدتك 📞")}
+          >
             <div className="w-10 h-10 flex items-center justify-center bg-purple-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
               <i className="ri-customer-service-line text-white text-lg"></i>
             </div>
@@ -229,43 +249,45 @@ export default function CartSummary() {
           <div className="flex items-center gap-3 mb-2">
             <i className="ri-secure-payment-line text-2xl text-yellow-600"></i>
             <p className="font-bold text-gray-900">طرق الدفع المتاحة</p>
-            <button 
+            <button
               onClick={() => setShowPaymentMethods(!showPaymentMethods)}
               className="mr-auto text-sm text-[#FFA500] hover:text-[#ff8c00] transition-colors cursor-pointer"
             >
-              {showPaymentMethods ? 'إخفاء' : 'عرض التفاصيل'}
+              {showPaymentMethods ? "إخفاء" : "عرض التفاصيل"}
             </button>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
-            <div 
+            <div
               className="bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer transform hover:scale-105"
-              onClick={() => handlePaymentMethodClick('بطاقة ائتمان')}
+              onClick={() => handlePaymentMethodClick("بطاقة ائتمان")}
             >
               <i className="ri-bank-card-line text-xl text-blue-600"></i>
             </div>
-            <div 
+            <div
               className="bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer transform hover:scale-105"
-              onClick={() => handlePaymentMethodClick('ماستركارد')}
+              onClick={() => handlePaymentMethodClick("ماستركارد")}
             >
               <i className="ri-mastercard-line text-xl text-red-600"></i>
             </div>
-            <div 
+            <div
               className="bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer transform hover:scale-105"
-              onClick={() => handlePaymentMethodClick('فيزا')}
+              onClick={() => handlePaymentMethodClick("فيزا")}
             >
               <i className="ri-visa-line text-xl text-blue-700"></i>
             </div>
-            <div 
+            <div
               className="bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer transform hover:scale-105"
-              onClick={() => handlePaymentMethodClick('باي بال')}
+              onClick={() => handlePaymentMethodClick("باي بال")}
             >
               <i className="ri-paypal-line text-xl text-blue-500"></i>
             </div>
           </div>
-          
+
           {showPaymentMethods && (
             <div className="mt-4 p-3 bg-white rounded-lg border border-gray-200 animate-slide-down">
-              <h4 className="font-semibold text-gray-900 mb-2">معلومات إضافية:</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                معلومات إضافية:
+              </h4>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• دفع آمن بتشفير SSL</li>
                 <li>• لا توجد رسوم إضافية</li>

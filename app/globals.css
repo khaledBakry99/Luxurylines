@@ -1,5 +1,146 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css');
-@import './styles/customScrollbar.css';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css");
+@import "./styles/customScrollbar.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dropdown Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.2s ease-in forwards;
+}
+
+/* Glow Effect */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(203, 193, 184, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(203, 193, 184, 0.5);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Close Button Animation */
+@keyframes closeButtonPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(203, 193, 184, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(203, 193, 184, 0);
+  }
+}
+
+@keyframes closeButtonGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(203, 193, 184, 0.3),
+      inset 0 0 15px rgba(203, 193, 184, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(203, 193, 184, 0.5),
+      inset 0 0 20px rgba(203, 193, 184, 0.2);
+  }
+}
+
+.close-button-pulse {
+  animation: closeButtonPulse 2s ease-in-out infinite;
+}
+
+.close-button-glow {
+  animation: closeButtonGlow 2s ease-in-out infinite;
+}
+
+/* Modal Close Animation */
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+}
+
+.modal-closing {
+  animation: modalFadeOut 0.5s ease-in forwards;
+}
+
+.backdrop-closing {
+  animation: backdropFadeOut 0.5s ease-in forwards;
+}
+
+/* Close Button Professional Animation */
+@keyframes closeButtonHover {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    background-color: rgb(239, 68, 68);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes closeButtonPulseRed {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+}
+
+.close-button-professional {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button-professional:hover {
+  animation: closeButtonPulseRed 1.5s ease-in-out infinite;
+}

@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
   typescript: {
     // ignoreBuildErrors: true,
   },
+  // Ensure trailing slashes are handled consistently
+  trailingSlash: true,
+  // Skip trailing slash redirect for static export
+  skipTrailingSlashRedirect: false,
 };
 
 export default nextConfig;

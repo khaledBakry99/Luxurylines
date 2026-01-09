@@ -1,43 +1,43 @@
-'use client';
+"use client";
 
 export default function ConsultationBenefits() {
   const benefits = [
     {
-      icon: 'ri-lightbulb-flash-line',
-      title: 'تحليل احترافي',
-      description: 'نقوم بتحليل شامل لاحتياجاتك ومتطلبات مشروعك بدقة عالية',
-      color: 'from-amber-500 to-orange-500'
+      icon: "ri-lightbulb-flash-line",
+      title: "تحليل احترافي",
+      description: "نقوم بتحليل شامل لاحتياجاتك ومتطلبات مشروعك بدقة عالية",
+      color: "from-amber-500 to-orange-500",
     },
     {
-      icon: 'ri-pencil-ruler-2-line',
-      title: 'تصميم مخصص',
-      description: 'نقدم لك أفكار تصميمية مبتكرة تناسب ذوقك وميزانيتك',
-      color: 'from-blue-500 to-cyan-500'
+      icon: "ri-pencil-ruler-2-line",
+      title: "تصميم مخصص",
+      description: "نقدم لك أفكار تصميمية مبتكرة تناسب ذوقك وميزانيتك",
+      color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: 'ri-money-dollar-circle-line',
-      title: 'تقدير التكلفة',
-      description: 'نوفر لك تقديراً دقيقاً للتكاليف والجدول الزمني للمشروع',
-      color: 'from-green-500 to-emerald-500'
+      icon: "ri-money-dollar-circle-line",
+      title: "تقدير التكلفة",
+      description: "نوفر لك تقديراً دقيقاً للتكاليف والجدول الزمني للمشروع",
+      color: "from-green-500 to-emerald-500",
     },
     {
-      icon: 'ri-team-line',
-      title: 'فريق متخصص',
-      description: 'خبراء في التصميم الداخلي والخارجي بخبرة تزيد عن 15 عاماً',
-      color: 'from-purple-500 to-pink-500'
+      icon: "ri-team-line",
+      title: "فريق متخصص",
+      description: "خبراء في التصميم الداخلي والخارجي بخبرة تزيد عن 15 عاماً",
+      color: "from-purple-500 to-pink-500",
     },
     {
-      icon: 'ri-file-text-line',
-      title: 'تقرير شامل',
-      description: 'تحصل على تقرير مفصل يتضمن كل التفاصيل والتوصيات',
-      color: 'from-red-500 to-rose-500'
+      icon: "ri-file-text-line",
+      title: "تقرير شامل",
+      description: "تحصل على تقرير مفصل يتضمن كل التفاصيل والتوصيات",
+      color: "from-red-500 to-rose-500",
     },
     {
-      icon: 'ri-customer-service-2-line',
-      title: 'متابعة مستمرة',
-      description: 'نبقى على تواصل معك لضمان تحقيق رؤيتك بالشكل الأمثل',
-      color: 'from-indigo-500 to-violet-500'
-    }
+      icon: "ri-customer-service-2-line",
+      title: "متابعة مستمرة",
+      description: "نبقى على تواصل معك لضمان تحقيق رؤيتك بالشكل الأمثل",
+      color: "from-indigo-500 to-violet-500",
+    },
   ];
 
   return (
@@ -49,15 +49,11 @@ export default function ConsultationBenefits() {
       <div className="container mx-auto px-6 relative z-10">
         {/* العنوان */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 space-x-reverse bg-[#CBC1B8]/20 px-6 py-3 rounded-full mb-6">
-            <i className="ri-star-line text-[#CBC1B8] text-xl"></i>
-            <span className="text-[#CBC1B8] font-semibold">ماذا ستحصل عليه</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            فوائد الاستشارة المجانية
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            فوائد النصائح المجانية من خبرائنا
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            نقدم لك استشارة شاملة ومجانية تماماً لمساعدتك في اتخاذ القرار الصحيح
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            نقدم لك نصائح شاملة ومجانية تماماً لمساعدتك في اتخاذ القرار الصحيح
           </p>
         </div>
 
@@ -71,7 +67,9 @@ export default function ConsultationBenefits() {
             >
               {/* الأيقونة */}
               <div className="mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}
+                >
                   <i className={`${benefit.icon} text-3xl text-white`}></i>
                 </div>
               </div>
@@ -105,7 +103,8 @@ export default function ConsultationBenefits() {
                 ضمان الجودة والاحترافية
               </h3>
               <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                نلتزم بتقديم أفضل الحلول والاستشارات المهنية التي تساعدك على تحقيق مشروع أحلامك بأعلى معايير الجودة والإبداع
+                نلتزم بتقديم أفضل النصائح والحلول المهنية التي تساعدك على تحقيق
+                مشروع أحلامك بأعلى معايير الجودة والإبداع
               </p>
             </div>
           </div>

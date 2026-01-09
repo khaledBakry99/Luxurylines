@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function ProjectCTA() {
   return (
@@ -26,7 +26,8 @@ export default function ProjectCTA() {
 
           {/* Description */}
           <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
-            دعنا نحول رؤيتك إلى واقع! احجز استشارة مجانية الآن واحصل على تصميم مخصص يناسب احتياجاتك
+            دعنا نحول رؤيتك إلى واقع! احصل على نصائح مجانية من خبرائنا الآن
+            واحصل على تصميم مخصص يناسب احتياجاتك
           </p>
 
           {/* Buttons */}
@@ -38,7 +39,7 @@ export default function ProjectCTA() {
               <div className="w-6 h-6 flex items-center justify-center">
                 <i className="ri-calendar-check-line text-xl group-hover:scale-110 transition-transform duration-300"></i>
               </div>
-              <span className="relative z-10">احجز استشارة مجانية</span>
+              <span className="relative z-10">احصل على نصائح مجانية</span>
               <div className="absolute inset-0 bg-[#F7F6F4] translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             </Link>
 

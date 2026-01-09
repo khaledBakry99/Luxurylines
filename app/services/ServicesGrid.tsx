@@ -1,44 +1,63 @@
-﻿'use client';
-import Link from 'next/link';
+﻿"use client";
+import Link from "next/link";
 
 export default function ServicesGrid() {
   const services = [
     {
       id: 1,
-      title: 'التصميم الداخلي',
-      description: 'تصميم مساحات داخلية فاخرة تعكس شخصيتك وأسلوب حياتك مع أحدث الاتجاهات العالمية',
-      icon: 'ri-home-smile-line',
-      features: ['تصميم ثلاثي الأبعاد', 'اختيار المواد', 'الإضاءة المتخصصة', 'الأثاث المخصص'],
-      color: 'from-[#1C474A] to-[#0F3A3E]',
-      link: '/services/interior-design'
+      title: "التصميم الداخلي",
+      description:
+        "تصميم مساحات داخلية فاخرة تعكس شخصيتك وأسلوب حياتك مع أحدث الاتجاهات العالمية",
+      icon: "ri-home-smile-line",
+      features: [
+        "تصميم ثلاثي الأبعاد",
+        "اختيار المواد",
+        "الإضاءة المتخصصة",
+        "الأثاث المخصص",
+      ],
+      color: "from-[#1C474A] to-[#0F3A3E]",
+      link: "/services/interior-design",
     },
     {
       id: 2,
-      title: 'التصميم الخارجي',
-      description: 'تصميم واجهات خارجية مميزة تجمع بين الجمال والوظيفة مع مراعاة البيئة المحيطة',
-      icon: 'ri-building-line',
-      features: ['تصميم الواجهات', 'تنسيق الحدائق', 'الإضاءة الخارجية', 'المواد المقاومة'],
-      color: 'from-green-500 to-emerald-500',
-      link: '/services/exterior-design'
+      title: "التصميم الخارجي",
+      description:
+        "تصميم واجهات خارجية مميزة تجمع بين الجمال والوظيفة مع مراعاة البيئة المحيطة",
+      icon: "ri-building-line",
+      features: [
+        "تصميم الواجهات",
+        "تنسيق الحدائق",
+        "الإضاءة الخارجية",
+        "المواد المقاومة",
+      ],
+      color: "from-green-500 to-emerald-500",
+      link: "/services/exterior-design",
     },
     {
       id: 3,
-      title: 'التشطيب',
-      description: 'خدمات تشطيب شاملة بأعلى معايير الجودة والدقة مع ضمان التسليم في الوقت المحدد',
-      icon: 'ri-paint-brush-line',
-      features: ['أعمال السباكة', 'الكهرباء', 'الدهانات', 'الأرضيات'],
-      color: 'from-[#CBC1B8] to-[#F7F6F4]',
-      link: '/services/finishing'
+      title: "التشطيب",
+      description:
+        "خدمات تشطيب شاملة بأعلى معايير الجودة والدقة مع ضمان التسليم في الوقت المحدد",
+      icon: "ri-paint-brush-line",
+      features: ["أعمال السباكة", "الكهرباء", "الدهانات", "الأرضيات"],
+      color: "from-[#CBC1B8] to-[#F7F6F4]",
+      link: "/services/finishing",
     },
     {
       id: 4,
-      title: 'توريد الأساس',
-      description: 'توفير وتوريد أفضل المواد والخامات الأساسية لمشروعك بجودة عالية وأسعار تنافسية',
-      icon: 'ri-truck-line',
-      features: ['مواد البناء', 'الخامات الفاخرة', 'التوصيل السريع', 'ضمان الجودة'],
-      color: 'from-[#0A2F33] to-[#1C474A]',
-      link: '/services/supply'
-    }
+      title: "توريد مواد البناء",
+      description:
+        "توفير وتوريد أفضل المواد والخامات الأساسية لمشروعك بجودة عالية وأسعار تنافسية",
+      icon: "ri-truck-line",
+      features: [
+        "مواد البناء",
+        "الخامات الفاخرة",
+        "التوصيل السريع",
+        "ضمان الجودة",
+      ],
+      color: "from-[#0A2F33] to-[#1C474A]",
+      link: "/services/supply",
+    },
   ];
 
   return (
@@ -51,7 +70,9 @@ export default function ServicesGrid() {
                 className="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-white/20 cursor-pointer hover:bg-white/20"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}
+                >
                   <i className={`${service.icon} text-3xl text-white`}></i>
                 </div>
 

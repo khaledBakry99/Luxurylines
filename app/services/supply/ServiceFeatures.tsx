@@ -1,37 +1,41 @@
-﻿'use client';
+"use client";
 
 export default function ServiceFeatures() {
   const features = [
     {
-      icon: 'ri-building-2-line',
-      title: 'مواد البناء الأساسية',
-      description: 'أسمنت، حديد، طوب، وجميع مواد البناء الأساسية من أفضل المصانع المعتمدة'
+      icon: "ri-building-2-line",
+      title: "مواد البناء الأساسية",
+      description:
+        "طوب، أسمنت، حديد، رمل وجميع مواد البناء الأساسية من أفضل المصادر الموثوقة",
     },
     {
-      icon: 'ri-paint-brush-line',
-      title: 'مواد التشطيب الفاخرة',
-      description: 'رخام، جرانيت، سيراميك، وباركيه من أرقى الأنواع المحلية والمستوردة'
+      icon: "ri-paint-brush-line",
+      title: "مواد التشطيب الداخلية",
+      description:
+        "جبس بورد، أصباغ، ديكورات من أفضل الماركات العالمية والمحلية",
     },
     {
-      icon: 'ri-lightbulb-line',
-      title: 'الأدوات الكهربائية',
-      description: 'كابلات، مفاتيح، إضاءة، ولوحات كهربائية من علامات تجارية موثوقة'
+      icon: "ri-lightbulb-line",
+      title: "الإضاءة والكهرباء",
+      description:
+        "أسلاك، مفاتيح، لمبات، وجميع المستلزمات من الماركات الموثوقة",
     },
     {
-      icon: 'ri-drop-line',
-      title: 'أدوات السباكة',
-      description: 'مواسير، صنابير، أدوات صحية، وجميع مستلزمات السباكة بجودة عالية'
+      icon: "ri-drop-line",
+      title: "أدوات السباكة",
+      description: "مواسير، خلاطات، أحواض، وجميع المستلزمات الصحية بأعلى جودة",
     },
     {
-      icon: 'ri-door-line',
-      title: 'الأبواب والنوافذ',
-      description: 'أبواب خشبية وألمنيوم، نوافذ UPVC بتصاميم عصرية وعازلة'
+      icon: "ri-door-line",
+      title: "الأبواب والنوافذ",
+      description: "أبواب خشبية وألمنيوم ونوافذ UPVC بتصاميم عصرية ومتينة",
     },
     {
-      icon: 'ri-paint-line',
-      title: 'الدهانات والعوازل',
-      description: 'دهانات عالية الجودة، عوازل حرارية ومائية من أفضل الشركات العالمية'
-    }
+      icon: "ri-paint-line",
+      title: "الدهانات والعوازل",
+      description:
+        "دهانات داخلية وخارجية، عوازل حرارية ومائية من أفضل الماركات العالمية",
+    },
   ];
 
   return (
@@ -41,8 +45,8 @@ export default function ServiceFeatures() {
           <h2 className="text-4xl md:text-5xl font-['Cairo'] font-bold text-white mb-4">
             المواد التي نوفرها
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            نوفر مجموعة شاملة من مواد البناء والتشطيب بأعلى معايير الجودة
+          <p className="text-xl text-[#CBC1B8]/90 max-w-3xl mx-auto">
+            نقدم مجموعة شاملة من أفضل المواد والخامات لضمان نجاح مشروعك
           </p>
         </div>
 
@@ -50,7 +54,7 @@ export default function ServiceFeatures() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/20 hover:bg-white/20"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 hover:bg-white/20"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-[#CBC1B8] to-[#F7F6F4] rounded-xl flex items-center justify-center mb-6">
                 <i className={`${feature.icon} text-3xl text-[#0A1F21]`}></i>
@@ -58,7 +62,7 @@ export default function ServiceFeatures() {
               <h3 className="text-2xl font-['Cairo'] font-bold text-white mb-4">
                 {feature.title}
               </h3>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[#CBC1B8]/85 leading-relaxed">
                 {feature.description}
               </p>
             </div>

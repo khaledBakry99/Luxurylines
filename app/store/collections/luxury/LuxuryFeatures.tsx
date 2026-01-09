@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
 export default function LuxuryFeatures() {
   const features = [
     {
-      icon: 'ri-vip-diamond-line',
-      title: 'قطع حصرية',
-      description: 'منتجات فريدة من نوعها بتصاميم حصرية لا تتكرر'
+      icon: "ri-vip-diamond-line",
+      title: "قطع حصرية",
+      description: "منتجات فريدة من نوعها بتصاميم حصرية لا تتكرر",
     },
     {
-      icon: 'ri-medal-line',
-      title: 'جودة استثنائية',
-      description: 'أفخر الخامات والمواد المنتقاة بعناية فائقة'
+      icon: "ri-medal-line",
+      title: "جودة استثنائية",
+      description: "أفخر الخامات والمواد المنتقاة بعناية فائقة",
     },
     {
-      icon: 'ri-customer-service-2-line',
-      title: 'خدمة VIP',
-      description: 'خدمة عملاء مخصصة واستشارات تصميم مجانية'
+      icon: "ri-customer-service-2-line",
+      title: "خدمة VIP",
+      description: "خدمة عملاء مخصصة ونصائح تصميم مجانية",
     },
     {
-      icon: 'ri-shield-star-line',
-      title: 'ضمان مدى الحياة',
-      description: 'ضمان شامل على جميع المنتجات الفاخرة'
-    }
+      icon: "ri-shield-star-line",
+      title: "ضمان مدى الحياة",
+      description: "ضمان شامل على جميع المنتجات الفاخرة",
+    },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function LuxuryFeatures() {
               className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border-2 border-gray-100 hover:border-[#FFA500]/30 transition-all duration-300 hover:shadow-xl"
               style={{
                 animation: `fadeIn 0.6s ease-out ${index * 0.1}s forwards`,
-                opacity: 0
+                opacity: 0,
               }}
             >
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-gradient-to-br from-[#FFA500] to-[#FF8C00] rounded-2xl shadow-lg">
